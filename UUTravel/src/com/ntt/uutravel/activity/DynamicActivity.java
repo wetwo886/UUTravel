@@ -14,7 +14,7 @@ public class DynamicActivity extends BaseH5Activity {
 	    if(event.getKeyCode() == KeyEvent.KEYCODE_BACK)
 	    {    	
 	       this.finish();
-	    }	    
+	    }	       
 	    return super.onKeyDown(keyCode, event);  
 	}  
 	
