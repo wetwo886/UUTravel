@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="100dp"
+android:layout_height="wrap_content"
+android:background="#fff1e600"
+android:gravity="center"
+>
+
+<Button 
+          android:id = "@+id/btnShare"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          android:drawableLeft="@drawable/share_img_64"
+          android:text="分享"
+          android:background="@drawable/menu_btn_bg"
+          android:textColor="#fff" 
+          /> 
+<Button 
+          android:id = "@+id/btnSp1"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:drawableLeft="@drawable/share_img_64"
+          android:text=""
+          android:background="#fff"
+          android:textColor="#fff" 
+          android:layout_below="@id/btnShare"
+          />           
+
+<Button
+          android:id = "@+id/btnFav"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          
+          android:drawableLeft="@drawable/fav_img_64"
+          android:text="收藏"
+          android:textColor="#fff"
+          android:background="@drawable/menu_btn_bg"
+          android:layout_below="@id/btnSp1"/> 
+    
+<Button 
+          android:id = "@+id/btnSp2"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:drawableLeft="@drawable/share_img_64"
+          android:text=""
+          android:background="#fff"
+          android:textColor="#fff" 
+          android:layout_below="@id/btnFav"
+          />    
+          
+<!--  <Button
+          android:id = "@+id/btnShowMap"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          android:drawableLeft="@drawable/back_btn_64"
+          android:text="显示地图"
+          android:textColor="#fff"
+          android:background="@drawable/menu_btn_bg"
+          android:layout_below="@id/btnSp2"/>
+          
+<Button 
+          android:id = "@+id/btnSp3"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:drawableLeft="@drawable/share_img_64"
+          android:text=""
+          android:background="#fff"
+          android:textColor="#fff" 
+          android:layout_below="@id/btnShowMap"
+          />   
+ -->
+
+<Button
+          android:id = "@+id/btnBack"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          android:drawableLeft="@drawable/back_btn_64"
+          android:text="返回"
+          android:textColor="#fff"
+           android:background="@drawable/menu_btn_bg"
+          android:layout_below="@id/btnSp2"/> 
+
+   
+/>
+</RelativeLayout>

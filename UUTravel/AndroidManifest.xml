@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ntt.uutravel"
+    android:versionCode="1010"
+    android:versionName="1.3" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <!-- 访问互联网权限 根据需要添加 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SDCARD读写权限 根据需要添加 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 网络状态检测权限  根据需要添加 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+     <!-- 地理位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-permission android:name="getui.permission.GetuiService.com.ntt.uutravel" />
+    
+    
+    <permission
+        android:name="getui.permission.GetuiService.com.ntt.uutravel"
+        android:protectionLevel="normal" >
+    </permission>
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        
+         <!-- 百度统计 App key -->
+         <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="OBVhTjuCZDjvcALIY4eNLT7Y" /> 
+         <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="OBVhTjuCZDjvcALIY4eNLT7Y" /> 
+         
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+
+   		<!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <meta-data 
+            android:name="BaiduMobAd_TIME_INTERVAL" 
+            android:value="1" /> 
+        
+         <!-- 百度统计 结束 -->
+         
+        <!--个推SDK配置开始-->
+        
+         <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="wDBNbonZ6w7UocT28JhyG8" /><!--替换为第三方应用的APPID-->
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="EGGiBN25Sr5MvYBXHo0WF1" /><!--替换为第三方应用的APPKEY-->
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="lM3S0ARQyB6Sy6gOlEsIi4" /><!--替换为第三方应用的APPSECRET-->
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+
+    	
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.ntt.uutravel.common.PushMessageReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.wDBNbonZ6w7UocT28JhyG8" />
+            </intent-filter>
+        </receiver>
+        
+        
+        
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service>
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        
+         <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+        
+         
+          <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+<activity   
+    android:name="com.igexin.getuiext.activity.GetuiExtActivity"   
+    android:configChanges="orientation|keyboard|keyboardHidden"  
+    android:excludeFromRecents="true"    android:process=":pushservice"   
+    android:taskAffinity="android.task.myServicetask"   
+    android:theme="@android:style/Theme.Translucent.NoTitleBar"   
+    android:exported="false"/>
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+            <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver> 
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.getui.demo"
+            android:process=":pushservice" />
+        <!-- android:authorities="downloads.com.getui.demo" -->
+         
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.第三方的appId" -->
+                <action android:name="com.igexin.sdk.action.etVyv7RHJ28BqN3KKCtKJ6" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+  
+        
+    	<!-- 个推SDK配置结束 -->
+        
+         <!-- 高德云图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="7e00a91daae817815028b429577cc4bc"/>
+        
+         <activity
+            android:name="com.ntt.uutravel.activity.SplashActivity"
+            android:label="@string/title_activity_h5"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            
+            </intent-filter>   		
+            
+            
+            <intent-filter>
+                <data android:scheme="com.ntt.uutravel" />
+                <action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>   	
+        </activity>
+        
+        
+        <activity
+            android:name="com.ntt.uutravel.activity.H5Activity"
+            android:label="@string/title_activity_h5"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+			
+
+   		
+        </activity>
+        
+        
+        <activity android:name=".activity.WebBroswerActivity" 
+            	  android:theme="@style/Theme.Anim"
+                   android:screenOrientation="portrait"/>
+
+        
+        <activity android:name=".activity.WebBroswerRecommendActivity" 
+            	  android:theme="@style/Theme.Anim"
+                   android:screenOrientation="portrait"/>        
+        
+         <activity android:name=".activity.PlaceMapActivity" 
+            	  android:theme="@style/Theme.Anim"
+                   android:screenOrientation="portrait"/> 
+            
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:screenOrientation="portrait" > 
+        </activity>
+        
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.ms.lingong.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+           />
+        
+        <!-- Deep hybrid Begin -->
+         <activity android:name=".activity.IndexActivity" 
+             	   android:launchMode="singleInstance"
+                   android:screenOrientation="portrait">
+         </activity>
+         
+         
+          <activity android:name=".activity.NearListActivity" 
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"/>
+          
+          <activity android:name=".activity.RecommendListActivity"
+            android:launchMode="singleInstance" 
+            android:screenOrientation="portrait"/>
+           
+          <activity android:name=".activity.ScenicListActivity" 
+              		android:launchMode="singleTop"
+            		android:screenOrientation="portrait"/>
+            
+          <activity android:name=".activity.FavoriteListActivity" 
+                    android:launchMode="singleInstance"
+            		android:screenOrientation="portrait"/>
+                
+      
+         <activity android:name=".activity.DynamicActivity" 
+            	   	android:theme="@style/Theme.Anim" 
+            		android:screenOrientation="portrait"/>
+          
+          
+        <!-- Deep Hybrid End -->  
+          
+        <activity android:name=".activity.HomeActivity" 
+            	  android:launchMode="singleInstance"/>
+        <activity android:name=".activity.RecommendActivity" 
+                  android:launchMode="singleInstance"/>
+        <activity android:name=".activity.PeripheralActivity" 
+                  android:launchMode="singleInstance"/>
+        <activity android:name=".activity.CollectionActivity" 
+                  android:launchMode="singleInstance"/>
+
+    </application>
+
+</manifest>

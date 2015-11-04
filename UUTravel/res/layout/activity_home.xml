@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar_bg" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="7dip"
+            android:src="@drawable/abuout_logo" />
+
+        <ImageView
+            android:id="@+id/button1"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dip"
+            android:src="@drawable/setup" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button1"
+            android:background="#777777" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/adv_pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dp" >
+                </android.support.v4.view.ViewPager>
+
+                <LinearLayout
+                    android:id="@+id/viewGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adv_pager"
+                    android:layout_marginRight="25dip"
+                    android:layout_marginTop="-45px"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="center"
+                    android:text="@string/main_tab_hot_city"
+                    android:textColor="#ffffff"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hot_city"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/banner" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city1"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="东京"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="10dip"
+                        android:paddingTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/nara" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city2"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="奈良"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="5dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/kyoto" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city3"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="京都"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/fuji_mountain" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city4"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="富士山"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="5dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/osaka" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city5"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="大阪"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/hokkaido" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city6"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="北海道"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:layout_marginBottom="10dip" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="5dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city7"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/nagoya" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name7"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city7"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="名古屋"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="10dip"
+                        android:paddingTop="5dip" >
+
+                        <ImageView
+                            android:id="@+id/hot_city8"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/okinawa" />
+
+                        <TextView
+                            android:id="@+id/hot_city_name8"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:textSize="16dip"
+                            android:layout_alignBottom="@+id/hot_city8"
+                            android:layout_centerHorizontal="true"
+                            android:background="#55000000"
+                            android:gravity="center"
+                            android:text="冲绳"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="center"
+                    android:text="@string/main_tab_choose_in_map"
+                    android:textColor="#ffffff"
+                    android:textSize="20dip" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="230dip" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

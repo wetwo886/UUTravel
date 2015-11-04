@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="top"
+        android:background="#ef5050"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#00000000"
+            android:contentDescription="@string/back_text"
+            android:src="@drawable/arrow_01" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="Medium Textsad"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#ffffff"
+            android:text="" />
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:contentDescription="@string/setup_text"
+            android:src="@drawable/setup" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.94"
+            android:paddingBottom="44dp" />
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+			
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/main_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/tab_home"
+                    style="@style/main_tab_bottom_active"
+                    android:checked="true"
+                    android:drawableTop="@drawable/btn_h"
+
+                    android:tag="tab_home"
+                    android:text="@string/main_tab_home" />
+
+                <RadioButton
+                    android:id="@+id/tab_recommend"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/btn_r"
+                    android:tag="tab_recommend"
+                    android:text="@string/main_tab_recommend" />
+
+                <RadioButton
+                    android:id="@+id/tab_peripheral"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/btn_p"
+                    android:tag="tab_peripheral"
+                    android:text="@string/main_tab_peripheral" />
+
+                <RadioButton
+                    android:id="@+id/tab_collection"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/btn_c"
+                    android:tag="tab_collection"
+                    android:text="@string/main_tab_collection" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

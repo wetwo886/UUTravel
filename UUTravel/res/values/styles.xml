@@ -1,0 +1,72 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@android:style/Theme">
+		 <!-- 设置没有标题 -->  
+        <item name="android:windowNoTitle">true</item>  
+    </style>
+    
+    <style name="Theme.Anim" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>  
+        <item name="android:windowBackground">@android:color/transparent</item>  
+        <item name="android:windowIsTranslucent">true</item>        
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#bababa</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+       
+    </style>
+    
+    <style name="Animation_pop_menu">
+		 <item name="android:windowEnterAnimation">@anim/pop_top_in</item>  
+    	 <item name="android:windowExitAnimation">@anim/pop_top_out</item>  
+       
+    </style>
+
+    
+        <style name="main_tab_bottom_active">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ef5151</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+        
+    </style>
+    
+   	<style name="Animation.Activity.Style" parent="@android:style/Animation.Activity">
+   	    <item name="android:windowNoTitle">true</item>
+
+        
+		
+	</style>
+	   <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Translucent">  
+        <item name="android:windowEnterAnimation">@anim/right_in</item>  
+        <item name="android:windowExitAnimation">@anim/right_out</item> 
+        
+         <item name="android:activityOpenEnterAnimation">@anim/right_in</item>  
+        <item name="android:activityOpenExitAnimation">@anim/right_out</item>  
+        <item name="android:activityCloseEnterAnimation">@anim/right_in</item>  
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item>  
+        <item name="android:taskOpenEnterAnimation">@anim/right_in</item>  
+        <item name="android:taskOpenExitAnimation">@anim/right_out</item>  
+        <item name="android:taskCloseEnterAnimation">@anim/right_in</item>  
+        <item name="android:taskCloseExitAnimation">@anim/right_out</item>  
+        <item name="android:taskToFrontEnterAnimation">@anim/right_in</item>  
+        <item name="android:taskToFrontExitAnimation">@anim/right_out</item>  
+        <item name="android:taskToBackEnterAnimation">@anim/right_in</item>  
+        <item name="android:taskToBackExitAnimation">@anim/right_out</item> 
+        
+    </style>  
+
+</resources>
